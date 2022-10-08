@@ -1,0 +1,47 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>England &#38; Wales Bank Holidays | ThisIsCKM </title>
+  <link rel="stylesheet" href="//code.jquery.com/ui/1.13.2/themes/base/jquery-ui.css">
+  <link th:href="@{/styles/css/bankholidays.css}" rel="stylesheet" />
+  <script src="https://code.jquery.com/jquery-3.6.0.js"></script>
+  <script src="https://code.jquery.com/ui/1.13.2/jquery-ui.js"></script>
+  <script>
+  $( function() {
+    $( "#datepicker" ).datepicker();
+  } );
+  </script>
+</head>
+<body>
+
+<span>
+  <input type="text" id="datepicker" class="pickadate" placeholder="Pick a date"/>
+</span>
+
+
+<p>Upcoming Bank Holidays</p>
+
+<table>
+  <thead>
+      <tr>
+          <th> Date </th>
+          <th> Title </th>
+      </tr>
+  </thead>
+  <tbody>
+<tr th:if="${holidays.empty}">
+          <td colspan="2"> No Holidays Available </td>
+      </tr>
+      <tr th:each="holiday : ${holidays}">
+          <td><span th:text="${holiday.date}"> Date </span></td>
+          <td><span th:text="${holiday.title}"> Title </span></td>
+      </tr>
+  </tbody>
+</table>
+ 
+ 
+
+</body>
+</html>

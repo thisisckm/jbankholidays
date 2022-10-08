@@ -1,0 +1,41 @@
+body {
+    margin: auto;
+    width: 1080px; 
+    padding: 50px;
+    font-family: 'Lexend Deca', sans-serif; 
+    color: #2E475D;
+}
+
+
+::-webkit-input-placeholder { /* Edge */
+    color: grey;
+}
+  
+:-ms-input-placeholder { /* Internet Explorer */
+    color: grey;
+}
+  
+::placeholder {
+    color: grey;
+}
+
+input[type="text"].pickadate {
+    float: right;
+    margin-right: 10px;
+}
+
+table {
+    font-family: arial, sans-serif;
+    border-collapse: collapse;
+    width: 100%;
+  }
+  
+  td, th {
+    border: 1px solid #dddddd;
+    text-align: left;
+    padding: 8px;
+  }
+  
+  tr:nth-child(even) {
+    background-color: #dddddd;
+  }
