@@ -26,7 +26,7 @@ phases:
       # update the following line with the URI of your own ECR repository
       - docker push $REPOSITORY_URI:latest
       - echo Writing image definitions file... 
-      - printf '[{ "name":"jbankholidays-main", "ImageURI":"%s"}]' $REPOSITORY_URI:latest > imageDetail.json
+      - printf '[{ "name":"jbankholidays-main", "imageUri":"%s"}]' $REPOSITORY_URI:latest > imageDetail.json
       #- printf '{"ImageURI":"%s"}' $REPOSITORY_URI:$IMAGE_TAG > imageDetail.json
       - cat imageDetail.json
 artifacts:
